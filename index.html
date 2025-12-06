@@ -3,7 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>– Ramadhan Faddilah Akbar (Animated)</title>
+
+    <style>
+        /* ===== GLOBAL DARK MODE ===== */
+        body {
+            margin: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            background: #0e0e11;
+            color: #e6e6e6;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== FADE-IN ANIMATION ===== */
+        .fade {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.9s ease-out;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        /* ===== GLASS CARD ===== */
+        .card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+        }
+
+        /* ===== HEADER HERO ANIMATED GRADIENT ===== */
+        header {
+            text-align: center;
+            padding: 130px 20px;
+            background: linear-gradient(160deg, #12121a, #1c1c24);
+            animation: gradientMove 6s ease infinite alternate;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeDown 1.4s forwards;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #d6d6d6;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeDown 1.8s forwards;
+        }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== SECTION STYLE ===== */
+        section {
+            padding: 60px 20px;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #76a9ff;
+            font-weight: 600;
+        }
+
+        /* Skill Tags */
+        .skill-tag {
+            background: rgba(118, 169, 255, 0.15);
+            border: 1px solid rgba(118, 169, 255, 0.3);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #9bbcff;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.1);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #12121a;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer a {
+            color: #76a9ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ramadhan Faddilah Akbar</h1>
+    <p>Electrical Engineering Graduate • Administrative & Operational Support • Photographer & Videographer</p>
+</header>
+
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="fade">
+    <h2>Tentang Saya</h2>
+    <div class="card">
+        <p>
+            Saya lulusan Teknik Elektro UHAMKA dengan pengalaman lintas fungsi — administrasi, operasional,
+            teknis, logistik, FnB, dan manufaktur. Adaptif, komunikatif, mampu bekerja dengan data dan dokumentasi.
+            Selain itu, aktif sebagai fotografer dan videografer sejak 2020 untuk berbagai klien.
+        </p>
+    </div>
+</section>
+
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="fade">
+    <h2>Pengalaman Kerja</h2>
+
+    <div class="card">
+        <h3>Freelance Fotografer & Videografer</h3>
+        <p><strong>Jul 2020 – Jan 2025</strong></p>
+        <ul>
+            <li>Mengelola proyek foto/video dari konsep hingga final delivery.</li>
+            <li>Mengelola komunikasi dan kebutuhan klien.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>PT Sicepat Express Indonesia – Staff Accounting Freelance</h3>
+        <p><strong>Okt 2022 – Mei 2023</strong></p>
+        <ul>
+            <li>Input lebih dari 1000 data keuangan per minggu.</li>
+            <li>Pengarsipan dokumen untuk audit.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>PT Indonesia Power – Engineering Intern</h3>
+        <p><strong>Jul 2022 – Agt 2022</strong></p>
+        <ul>
+            <li>Pengumpulan data teknis generator.</li>
+            <li>Laporan sistem proteksi overspeed.</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ===== EDUCATION ===== -->
+<section id="education" class="fade">
+    <h2>Pendidikan</h2>
+
+    <div class="card">
+        <h3>Universitas Muhammadiyah Prof. Dr. Hamka (UHAMKA)</h3>
+        <p><strong>S1 Teknik Elektro – IPK 3.27</strong></p>
+        <ul>
+            <li>UKM iFotografi</li>
+            <li>PKM Jumantik</li>
+            <li>Program Kampus Merdeka</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>SMK Negeri 36 Jakarta – Teknik Kendaraan Ringan</h3>
+        <p>2015–2018</p>
+    </div>
+</section>
+
+
+<!-- ===== CERTIFICATES ===== -->
+<section id="certificates" class="fade">
+    <h2>Sertifikat</h2>
+    <div class="card">
+        <ul>
+            <li>TOEFL 503 – Elskill English Course (2025)</li>
+            <li>Digital Marketing Mini Course – RevoU (2025)</li>
+            <li>Microsoft Talenta Azure AI Certificate Completion (2024)</li>
+            <li>BNSP Tune Up EFI & Konvensional (2022)</li>
+            <li>Juara Foto Ouvalresearch X Telkomsel (2017)</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="fade">
+    <h2>Keahlian</h2>
+    <div class="skills-list">
+        <div class="skill-tag">Data Management</div>
+        <div class="skill-tag">Project Coordination</div>
+        <div class="skill-tag">Process Improvement</div>
+        <div class="skill-tag">Microsoft Excel</div>
+        <div class="skill-tag">Matlab</div>
+        <div class="skill-tag">Autocad</div>
+        <div class="skill-tag">Video Editing</div>
+        <div class="skill-tag">AI Tools</div>
+        <div class="skill-tag">Communication</div>
+        <div class="skill-tag">Teamwork</div>
+        <div class="skill-tag">Problem Solving</div>
+    </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <h3>Hubungi Saya</h3>
+    <p>Email: <a href="mailto:ramadhanfaddilah35@gmail.com">ramadhanfaddilah35@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/ramadhanfaddilah-akbar-0368a6331">Profil Saya</a></p>
+    <p>No. Telepon: 081584231648</p>
+</footer>
+
+
+<!-- ===== JAVASCRIPT FOR SCROLL ANIMATION ===== -->
+<script>
+    const fadeElements = document.querySelectorAll('.fade');
+
+    function showOnScroll() {
+        fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect().top;
+            if (rect < window.innerHeight - 120) {
+                el.classList.add('show');
+            }
+        });
+    }
+
+    document.addEventListener('scroll', showOnScroll);
+    window.onload = showOnScroll;
+</script>
 </head>
 <body>
     
